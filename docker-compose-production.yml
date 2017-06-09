@@ -1,0 +1,14 @@
+web:
+  build: .
+  dockerfile: docker/Dockerfile.production
+  hostname: YOUR-HOSTNAME
+  cpu_quota: 20000
+  mem_limit: 400M
+  command: dumb-init npm run fastboot
+  restart: always
+  env_file: /home/deploy/apps/APP-NAME/shared/secrets.env
+  labels:
+    - "netguru.appname=APP-NAME"
+    - "netguru.stage=production"
+  expose:
+    - "3000"
