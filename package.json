@@ -45,5 +45,10 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "fastboot-app-server": "^1.0.0-rc.5",
+    "fastboot-s3-downloader": "^0.2.1",
+    "fastboot-s3-notifier": "^0.1.2"
+  }
 }
